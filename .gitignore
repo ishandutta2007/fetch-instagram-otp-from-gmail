@@ -1,0 +1,4 @@
+*.json
+config.txt
+*.bkp
+__pycache__
