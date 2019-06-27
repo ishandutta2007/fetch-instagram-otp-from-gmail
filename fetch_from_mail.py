@@ -70,7 +70,7 @@ def main():
     credentials = get_oath_credentials()
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', http=http)
-    messages = list_messages_matching_query(service, "me", query=contents.QUERY_TERM)
+    messages = list_messages_matching_query(service, "me", query=constants.QUERY_TERM)
     for message in messages:
         msg = get_message(service, "me", message['id'])
         headers = msg['payload']['headers']
